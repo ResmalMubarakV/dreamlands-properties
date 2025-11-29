@@ -1,67 +1,109 @@
-import Logo from "./assets/Logo.png";
-
 function App() {
   return (
-    <div style={{
-      height: "100vh",
-      width: "100vw",
-      background: "linear-gradient(135deg, #0f5132, #3a3a3a)", // green → gray mix
-      color: "white",
-      fontFamily: "sans-serif",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      position: "relative"
-    }}>
-
-      {/* Topbar */}
-      <div style={{
-        width: "100%",
-        height: "75px",
-        background: "#000", // black header — logo pops clearly here
+    <div
+      style={{
+        minHeight: "100vh",
+        minWidth: "100vw",
+        background: "linear-gradient(135deg, #0f5132, #3a3a3a)", // PURE green + gray
+        color: "#ffffff",
+        fontFamily: "system-ui, sans-serif",
         display: "flex",
-        alignItems: "center",
-        padding: "0 30px",
-        gap: "15px",
-        position: "absolute",
-        top: 0,
-        left: 0,
-        boxShadow: "0px 3px 15px rgba(0,0,0,0.4)"
-      }}>
-        <img 
-          src={Logo}
-          alt="Logo"
+        flexDirection: "column",
+      }}
+    >
+        <header
           style={{
-            height: "50px",
-            width: "50px",
-            objectFit: "contain"
+            width: "100%",
+            backgroundColor: "#f4f5f3",       // 🍃 light gray with slight green tone
+            padding: "10px 18px",
+            boxShadow: "0 2px 10px rgba(0,0,0,0.15)",
+            display: "flex",
+            alignItems: "center",
+            gap: "12px"
           }}
-        />
-        <h1 style={{
-          fontSize: "1.7rem",
-          margin: 0,
-          fontWeight: "600",
-          letterSpacing: "0.5px"
-        }}>
-          Dreamlands Properties
+        >
+          <img
+            src="/Logo.png"
+            alt="Dreamlands Properties Logo"
+            style={{
+              height: "42px",
+              width: "42px",
+              objectFit: "contain"
+            }}
+          />
+          
+          <span
+            style={{
+              fontSize: "clamp(1.2rem, 3vw, 1.6rem)",
+              fontWeight: 600,
+              color: "#2b2b2b",               // 🔥 smooth deep gray
+              letterSpacing: "0.3px"
+            }}
+          >
+            Dreamlands Properties
+          </span>
+        </header>
+
+      <main
+          style={{
+            flex: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",   // <— horizontally centers
+            textAlign: "center",        // <— aligns heading to center
+            padding: "20px"
+          }}
+        >
+          <div>
+          <h1
+          style={{
+            fontSize: "clamp(2rem, 5vw, 4rem)",
+            fontWeight: 700,
+            whiteSpace: "nowrap",
+            textShadow:
+              "0 0 10px rgba(255,255,255,0.7), 0 0 30px rgba(0,255,100,0.6)",
+            animation: "fadeUp 1.8s ease forwards",
+            opacity: 0
+          }}
+        >
+          🚧 Website Under Maintenance 🚧
         </h1>
-      </div>
 
-      {/* Center Content */}
-      <div style={{
-        marginTop: "80px", // pushing content below header
-        textAlign: "center"
-      }}>
-        <h2 style={{ fontSize: "3rem", fontWeight: "700", marginBottom: "10px" }}>
-          🚧 Website Under Maintenance
-        </h2>
-        <p style={{ fontSize: "1.3rem", opacity: 0.9 }}>
-          We’re improving your experience.<br/>
-          Please visit again soon.
-        </p>
-      </div>
+        <style>
+        {`
+        @keyframes fadeUp {
+          0% { opacity: 0; transform: translateY(25px); }
+          70% { opacity: 1; transform: translateY(0px); }
+          100% { opacity: 1; }
+        }
+        `}
+        </style>
 
+
+    <p
+      style={{
+        fontSize: "clamp(1rem, 2vw, 1.3rem)",
+        opacity: 0.9,
+        marginTop: "10px"
+      }}
+    >
+      We’re upgrading the website for a better experience.
+      Please check back soon.
+    </p>
+  </div>
+</main>
+
+
+      <footer
+        style={{
+          padding: "10px",
+          textAlign: "center",
+          fontSize: "clamp(0.75rem, 1.6vw, 0.9rem)",
+          opacity: 0.8
+        }}
+      >
+        © {new Date().getFullYear()} Dreamlands Properties. All rights reserved.
+      </footer>
     </div>
   );
 }
