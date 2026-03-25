@@ -109,7 +109,7 @@ const Contact = () => {
 
                   <div className="flex items-center gap-3">
                     <Mail size={20} className="text-primary" />
-                    <span>info@dreamlandsproperties.com</span>
+                    <span>dreamlandspropertiespkd@gmail.com</span>
                   </div>
 
                 </div>
