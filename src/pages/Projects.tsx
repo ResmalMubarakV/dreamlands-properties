@@ -1,5 +1,5 @@
 import { Download, ShieldCheck, Sun, Droplets, Landmark, Cctv, TreePine, MapPin } from "lucide-react";
-import plotImg from "../assets/plot.png";
+import plotImg from "../assets/plot.webp";
 
 const Projects = () => {
   return (

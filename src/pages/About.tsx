@@ -1,5 +1,5 @@
-import anilSign from "../assets/anilchacko.png";
-import ratheeshSign from "../assets/ratheeshrajan.png";
+import anilSign from "../assets/anilchacko.webp";
+import ratheeshSign from "../assets/ratheeshrajan.webp";
 
 const team = [
   {

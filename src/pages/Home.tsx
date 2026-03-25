@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Car, Shield, TreePine, Wrench, Clock, Award, School, Hospital, ShoppingBag, Train, Landmark, Plane, Map, Home as HomeIcon, BedDouble, Maximize } from "lucide-react";
-import heroImage from "@/assets/homecover.jpg";
-import ksrtcImg from "../assets/ksrtc.jpeg";
-import schoolImg from "../assets/bharathmatha.avif";
-import mallImg from "../assets/lulu.avif";
-import railwayImg from "../assets/railway.jpg";
-import collegeImg from "../assets/victoria.jpg";
-import hospitalImg from "../assets/hospital.jpeg";
+import heroImage from "@/assets/homecover.webp";
+import ksrtcImg from "../assets/ksrtc.webp";
+import schoolImg from "../assets/bharathmatha.webp";
+import mallImg from "../assets/lulu.webp";
+import railwayImg from "../assets/railway.webp";
+import collegeImg from "../assets/victoria.webp";
+import hospitalImg from "../assets/hospital.webp";
 
 const amenities = [
   { icon: Map, label: "1.88 Acres Land" },

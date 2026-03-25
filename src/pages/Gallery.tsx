@@ -1,22 +1,22 @@
-import bedroom1 from "../assets/bedroom1.jpg";
-import bedroom2 from "../assets/bedroom2.jpg";
-import bedroom3 from "../assets/bedroom3.jpg";
+import bedroom1 from "../assets/bedroom1.webp";
+import bedroom2 from "../assets/bedroom2.webp";
+import bedroom3 from "../assets/bedroom3.webp";
 
-import living1 from "../assets/living1.jpg";
-import living2 from "../assets/living2.jpg";
-import living3 from "../assets/living3.jpg";
+import living1 from "../assets/living1.webp";
+import living2 from "../assets/living2.webp";
+import living3 from "../assets/living3.webp";
 
-import bathroom1 from "../assets/bathroom1.jpg";
-import bathroom2 from "../assets/bathroom2.jpg";
-import bathroom3 from "../assets/bathroom3.jpg";
+import bathroom1 from "../assets/bathroom1.webp";
+import bathroom2 from "../assets/bathroom2.webp";
+import bathroom3 from "../assets/bathroom3.webp";
 
-import kitchen1 from "../assets/kitchen1.jpg";
-import kitchen2 from "../assets/kitchen2.jpg";
-import kitchen3 from "../assets/kitchen3.jpg";
+import kitchen1 from "../assets/kitchen1.webp";
+import kitchen2 from "../assets/kitchen2.webp";
+import kitchen3 from "../assets/kitchen3.webp";
 
-import landscape1 from "../assets/landscape1.jpg";
-import landscape2 from "../assets/landscape2.jpg";
-import landscape3 from "../assets/landscape3.jpg";
+import landscape1 from "../assets/landscape1.webp";
+import landscape2 from "../assets/landscape2.webp";
+import landscape3 from "../assets/landscape3.webp";
 
 const categories = [
   {

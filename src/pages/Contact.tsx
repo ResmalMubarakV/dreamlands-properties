@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
-import contactBg from "../assets/contactpage.png";
+import contactBg from "../assets/contactpage.webp";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
