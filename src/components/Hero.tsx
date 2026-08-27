@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     return `/images/herosection/ezgif-frame-${padded}.png`;
   };
 
-  // High performance Canvas render function
+  // High performance Canvas render function with nearest-frame fallback
   const renderFrame = useCallback((frameNumber: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -51,9 +51,29 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     if (!ctx) return;
 
     const clampedIndex = Math.min(Math.max(1, Math.round(frameNumber)), TOTAL_FRAMES);
-    const img = imagesRef.current[clampedIndex - 1];
+    let targetImg = imagesRef.current[clampedIndex - 1];
 
-    if (!img || !img.complete) return;
+    // Fallback: If exact requested frame is not ready yet, search nearest loaded frame
+    if (!targetImg || !targetImg.complete || targetImg.naturalWidth === 0) {
+      for (let i = clampedIndex - 1; i >= 0; i--) {
+        const candidate = imagesRef.current[i];
+        if (candidate && candidate.complete && candidate.naturalWidth > 0) {
+          targetImg = candidate;
+          break;
+        }
+      }
+      if (!targetImg || !targetImg.complete || targetImg.naturalWidth === 0) {
+        for (let i = clampedIndex; i < TOTAL_FRAMES; i++) {
+          const candidate = imagesRef.current[i];
+          if (candidate && candidate.complete && candidate.naturalWidth > 0) {
+            targetImg = candidate;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!targetImg || !targetImg.complete || targetImg.naturalWidth === 0) return;
 
     // High DPI scaling for ultra crisp rendering
     const dpr = window.devicePixelRatio || 1;
@@ -70,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     ctx.clearRect(0, 0, width, height);
 
     // Cover object-fit logic
-    const imgRatio = img.width / img.height;
+    const imgRatio = targetImg.width / targetImg.height;
     const containerRatio = width / height;
 
     let drawWidth = width;
@@ -86,13 +106,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
       offsetX = (width - drawWidth) / 2;
     }
 
-    ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    ctx.drawImage(targetImg, offsetX, offsetY, drawWidth, drawHeight);
     ctx.restore();
 
     currentFrameRef.current = clampedIndex;
   }, []);
 
-  // Preload frames
+  // Preload frames with top priority for initial frames
   useEffect(() => {
     let isMounted = true;
     const images: HTMLImageElement[] = [];
@@ -107,13 +127,11 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
         loadedCount++;
         setLoadProgress(Math.round((loadedCount / TOTAL_FRAMES) * 100));
 
-        if (loadedCount === 1) {
-          renderFrame(1);
-        }
+        // Immediately trigger re-render as soon as any frame arrives!
+        renderFrame(currentFrameRef.current);
 
         if (loadedCount === TOTAL_FRAMES) {
           setImagesLoaded(true);
-          renderFrame(currentFrameRef.current);
         }
       };
 
@@ -127,6 +145,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     }
 
     imagesRef.current = images;
+
+    // Initial draw attempt
+    renderFrame(1);
 
     const handleResize = () => {
       renderFrame(currentFrameRef.current);
@@ -181,10 +202,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
       {/* Sticky Fullscreen Canvas Viewport */}
       <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center z-0">
         
+        {/* Instant Fallback Architectural Poster Background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-40 z-0 transition-opacity duration-1000"
+          style={{ backgroundImage: "url('/assets/hero_villa_dark.jpg')" }}
+        />
+
         {/* HTML5 Render Canvas */}
         <canvas
           ref={canvasRef}
-          className="absolute inset-0 w-full h-full object-cover filter contrast-105"
+          className="absolute inset-0 w-full h-full object-cover filter contrast-105 z-0"
         />
 
         {/* Minimal Gradient Shadow Overlay (Allows video animation to be 100% visible) */}
