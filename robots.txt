@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block system junk files
-Disallow: /.DS_Store
-
-# Sitemap (important for SEO)
-Sitemap: https://dreamlandsproperties.com/sitemap.xml
