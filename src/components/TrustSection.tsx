@@ -5,7 +5,7 @@ import { trustPrinciples } from '../data/trustPrinciples';
 
 export const TrustSection: React.FC = () => {
   return (
-    <section id="trust" className="py-24 md:py-32 bg-[#0a0b0d] relative border-b border-white/5">
+    <section id="trust" className="py-14 md:py-16 bg-[#0a0b0d] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader

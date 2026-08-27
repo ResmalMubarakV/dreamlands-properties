@@ -10,7 +10,7 @@ export const PalakkadSection: React.FC = () => {
   const selectedZone = palakkadZones.find((z) => z.id === selectedZoneId) || palakkadZones[0];
 
   return (
-    <section id="palakkad" className="py-24 md:py-32 bg-[#0a0b0d] relative overflow-hidden border-b border-white/5">
+    <section id="palakkad" className="py-14 md:py-16 bg-[#0a0b0d] relative overflow-hidden border-b border-white/5">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none" />
 

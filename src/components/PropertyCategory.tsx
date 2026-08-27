@@ -11,7 +11,7 @@ interface PropertyCategoryProps {
 
 export const PropertyCategory: React.FC<PropertyCategoryProps> = ({ onSelectCategory }) => {
   return (
-    <section id="categories" className="py-24 md:py-32 bg-[#0a0b0d] relative border-b border-white/5">
+    <section id="categories" className="py-14 md:py-18 bg-[#0a0b0d] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader

@@ -33,7 +33,7 @@ const leadershipData: LeadershipMember[] = [
 
 export const LeadershipTeam: React.FC = () => {
   return (
-    <section id="leadership" className="py-24 md:py-32 bg-[#0a0b0d] relative border-b border-white/5 overflow-hidden">
+    <section id="leadership" className="py-14 md:py-16 bg-[#0a0b0d] relative border-b border-white/5 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none transform translate-x-1/2" />
 

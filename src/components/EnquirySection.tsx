@@ -64,7 +64,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#0d0e12] relative overflow-hidden border-b border-white/5">
+    <section id="contact" className="py-14 md:py-16 bg-[#0d0e12] relative overflow-hidden border-b border-white/5">
       {/* Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none" />
 

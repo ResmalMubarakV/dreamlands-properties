@@ -24,7 +24,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
     : projectsData.filter((p) => p.propertyType === activeFilter);
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-[#0d0e12] relative border-b border-white/5">
+    <section id="projects" className="py-14 md:py-18 bg-[#0d0e12] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

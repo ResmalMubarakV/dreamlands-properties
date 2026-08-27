@@ -5,7 +5,7 @@ import { whyUsData } from '../data/whyUs';
 
 export const WhyDreamlands: React.FC = () => {
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-[#0d0e12] relative border-b border-white/5">
+    <section id="why-us" className="py-14 md:py-16 bg-[#0d0e12] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader

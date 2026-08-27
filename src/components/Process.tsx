@@ -5,7 +5,7 @@ import { processSteps } from '../data/process';
 
 export const Process: React.FC = () => {
   return (
-    <section id="process" className="py-24 md:py-32 bg-[#0a0b0d] relative border-b border-white/5">
+    <section id="process" className="py-14 md:py-16 bg-[#0a0b0d] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader
