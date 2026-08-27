@@ -16,20 +16,20 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   light = false
 }) => {
   return (
-    <div className={`mb-12 md:mb-16 ${align === 'center' ? 'text-center mx-auto max-w-3xl' : 'max-w-3xl'}`}>
+    <div className={`mb-8 md:mb-10 ${align === 'center' ? 'text-center mx-auto max-w-3xl' : 'max-w-3xl'}`}>
       {eyebrow && (
         <div className="inline-flex items-center gap-2 mb-3">
           <span className="h-px w-6 bg-[#c5a880]"></span>
-          <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#c5a880] uppercase">
+          <span className="text-[11px] md:text-xs font-semibold tracking-[0.25em] text-[#c5a880] uppercase font-mono">
             {eyebrow}
           </span>
         </div>
       )}
-      <h2 className={`font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.15] tracking-tight ${light ? 'text-[#0a0b0d]' : 'text-[#f4f1ea]'}`}>
+      <h2 className={`font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.12] tracking-tight ${light ? 'text-[#0a0b0d]' : 'text-[#f4f1ea]'}`}>
         {title}
       </h2>
       {description && (
-        <p className={`mt-4 text-base sm:text-lg font-light leading-relaxed ${light ? 'text-[#4a4d55]' : 'text-[#9e9a90]'}`}>
+        <p className={`mt-3 sm:mt-4 text-sm sm:text-base md:text-lg font-light leading-relaxed tracking-wide ${light ? 'text-[#4a4d55]' : 'text-[#a8a398]'}`}>
           {description}
         </p>
       )}

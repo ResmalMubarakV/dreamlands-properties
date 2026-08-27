@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { ArrowDown, ArrowUpRight, Download } from 'lucide-react';
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from 'framer-motion';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -33,8 +33,15 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     offset: ['start start', 'end end']
   });
 
-  // Map scroll progress (0 to 1) to frame numbers (1 to 170)
-  const frameIndexMotion = useTransform(scrollYProgress, [0, 1], [1, TOTAL_FRAMES]);
+  // Apple-grade spring physics for butter smooth 60fps momentum
+  const smoothScrollY = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 24,
+    restDelta: 0.0005
+  });
+
+  // Map smooth scroll progress (0 to 1) to frame numbers (1 to 170)
+  const frameIndexMotion = useTransform(smoothScrollY, [0, 1], [1, TOTAL_FRAMES]);
 
   // Helper to get image path for a frame
   const getFramePath = (index: number) => {
@@ -170,22 +177,22 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
     renderFrame(latest);
   });
 
-  // Non-Overlapping Animated Text Transforms:
+  // Non-Overlapping Animated Text Transforms (Spring Smoothed):
   // Milestone 1 (0% to 20% scroll) - Fades out completely by 20%
-  const opacity1 = useTransform(scrollYProgress, [0, 0.15, 0.20], [1, 1, 0]);
-  const y1 = useTransform(scrollYProgress, [0, 0.15, 0.20], [0, 0, -25]);
+  const opacity1 = useTransform(smoothScrollY, [0, 0.15, 0.20], [1, 1, 0]);
+  const y1 = useTransform(smoothScrollY, [0, 0.15, 0.20], [0, 0, -25]);
 
   // Milestone 2 (25% to 48% scroll) - Completely clear gap between 20% and 25%
-  const opacity2 = useTransform(scrollYProgress, [0.24, 0.29, 0.44, 0.49], [0, 1, 1, 0]);
-  const y2 = useTransform(scrollYProgress, [0.24, 0.29, 0.44, 0.49], [25, 0, 0, -25]);
+  const opacity2 = useTransform(smoothScrollY, [0.24, 0.29, 0.44, 0.49], [0, 1, 1, 0]);
+  const y2 = useTransform(smoothScrollY, [0.24, 0.29, 0.44, 0.49], [25, 0, 0, -25]);
 
   // Milestone 3 (54% to 76% scroll) - Completely clear gap between 49% and 54%
-  const opacity3 = useTransform(scrollYProgress, [0.53, 0.58, 0.72, 0.77], [0, 1, 1, 0]);
-  const y3 = useTransform(scrollYProgress, [0.53, 0.58, 0.72, 0.77], [25, 0, 0, -25]);
+  const opacity3 = useTransform(smoothScrollY, [0.53, 0.58, 0.72, 0.77], [0, 1, 1, 0]);
+  const y3 = useTransform(smoothScrollY, [0.53, 0.58, 0.72, 0.77], [25, 0, 0, -25]);
 
   // Milestone 4 (82% to 100% scroll) - Completely clear gap between 77% and 82%
-  const opacity4 = useTransform(scrollYProgress, [0.81, 0.86, 1], [0, 1, 1]);
-  const y4 = useTransform(scrollYProgress, [0.81, 0.86, 1], [25, 0, 0]);
+  const opacity4 = useTransform(smoothScrollY, [0.81, 0.86, 1], [0, 1, 1]);
+  const y4 = useTransform(smoothScrollY, [0.81, 0.86, 1], [25, 0, 0]);
 
   // Dynamic pointer-events & display properties so inactive milestones are hidden from DOM rendering
   const display1 = useTransform(opacity1, (v) => (v > 0.001 ? 'flex' : 'none'));
@@ -199,7 +206,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
   const pointerEvents4 = useTransform(opacity4, (v) => (v > 0.05 ? 'auto' : 'none'));
 
   // Scrub bar indicator
-  const scrubBarWidth = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const scrubBarWidth = useTransform(smoothScrollY, [0, 1], ['0%', '100%']);
 
   return (
     <section id="home" ref={containerRef} className="relative w-full h-[210vh] bg-[#0a0b0d]">
