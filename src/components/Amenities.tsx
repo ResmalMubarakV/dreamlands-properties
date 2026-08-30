@@ -58,7 +58,7 @@ const amenitiesData: AmenityItem[] = [
 
 export const Amenities: React.FC = () => {
   return (
-    <section id="amenities" className="py-14 md:py-18 bg-[#0a0b0d] relative border-b border-white/5">
+    <section id="amenities" className="py-8 sm:py-14 md:py-18 bg-[#0a0b0d] relative border-b border-white/5">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none transform -translate-y-1/2" />
 
@@ -70,45 +70,46 @@ export const Amenities: React.FC = () => {
           description="Every utility and amenity at Garden Green is fully built out to support an unhurried, secure, and natural lifestyle at Aalampallam Palakkad."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10">
+        {/* Responsive Grid: 2 cols on mobile, 3 cols on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8 mt-6 sm:mt-10">
           {amenitiesData.map((item, idx) => {
             const IconComponent = item.icon;
             return (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className="group relative p-8 bg-[#121418] border border-white/5 hover:border-[#c5a880]/30 transition-all duration-500 flex flex-col justify-between rounded-xl shadow-lg hover:shadow-2xl"
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.5, delay: idx * 0.06 }}
+                className="group relative p-4 sm:p-8 bg-[#121418] border border-white/5 hover:border-[#c5a880]/30 transition-all duration-500 flex flex-col justify-between rounded-xl shadow-lg hover:shadow-2xl"
               >
                 {/* Accent border glow */}
                 <div className="absolute inset-0 border border-[#c5a880]/0 group-hover:border-[#c5a880]/20 rounded-xl transition-all duration-500 pointer-events-none" />
 
                 <div>
                   {/* Top Line with Icon Logo & Badge */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#c5a880]/10 border border-[#c5a880]/30 flex items-center justify-center text-[#c5a880] transition-colors duration-300 group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d]">
-                      <IconComponent className="w-6 h-6" />
+                  <div className="flex items-start justify-between mb-3 sm:mb-6">
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-[#c5a880]/10 border border-[#c5a880]/30 flex items-center justify-center text-[#c5a880] transition-colors duration-300 group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d]">
+                      <IconComponent className="w-4 h-4 sm:w-6 sm:h-6" />
                     </div>
                     {item.badgeText && (
-                      <span className="text-[9px] uppercase tracking-widest px-2.5 py-1 bg-white/5 text-[#c5a880] border border-[#c5a880]/20 font-semibold font-mono rounded">
+                      <span className="hidden sm:inline-block text-[9px] uppercase tracking-widest px-2.5 py-1 bg-white/5 text-[#c5a880] border border-[#c5a880]/20 font-semibold font-mono rounded">
                         {item.badgeText}
                       </span>
                     )}
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#f4f1ea] font-normal mb-3 transition-colors duration-300 group-hover:text-[#c5a880]">
+                  <h3 className="font-serif text-sm sm:text-2xl text-[#f4f1ea] font-normal mb-1 sm:mb-3 transition-colors duration-300 group-hover:text-[#c5a880] line-clamp-1 sm:line-clamp-none">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#9e9a90] font-light leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-[#9e9a90] font-light leading-relaxed line-clamp-2 sm:line-clamp-none">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Bottom line accent */}
-                <div className="w-full h-[1px] bg-white/5 group-hover:bg-[#c5a880]/30 transition-colors duration-500 mt-6" />
+                <div className="w-full h-[1px] bg-white/5 group-hover:bg-[#c5a880]/30 transition-colors duration-500 mt-3 sm:mt-6" />
               </motion.div>
             );
           })}

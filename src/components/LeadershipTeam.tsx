@@ -33,7 +33,7 @@ const leadershipData: LeadershipMember[] = [
 
 export const LeadershipTeam: React.FC = () => {
   return (
-    <section id="leadership" className="py-14 md:py-16 bg-[#0a0b0d] relative border-b border-white/5 overflow-hidden">
+    <section id="leadership" className="py-8 sm:py-14 md:py-16 bg-[#0a0b0d] relative border-b border-white/5 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none transform translate-x-1/2" />
 
@@ -47,15 +47,15 @@ export const LeadershipTeam: React.FC = () => {
         />
 
         {/* Leadership Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 mt-6 sm:mt-12">
           {leadershipData.map((member, idx) => (
             <motion.div
               key={member.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group p-8 sm:p-10 bg-[#121418] border border-white/10 hover:border-[#c5a880]/50 rounded-2xl transition-all duration-500 shadow-xl flex flex-col justify-between relative overflow-hidden"
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="group p-5 sm:p-10 bg-[#121418] border border-white/10 hover:border-[#c5a880]/50 rounded-xl sm:rounded-2xl transition-all duration-500 shadow-xl flex flex-col justify-between relative overflow-hidden"
             >
               {/* Subtle card corner gold glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#c5a880]/5 rounded-bl-full pointer-events-none group-hover:bg-[#c5a880]/15 transition-all duration-500" />

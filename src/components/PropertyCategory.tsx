@@ -68,7 +68,7 @@ const renderCategoryLogo = (id: string) => {
 
 export const PropertyCategory: React.FC<PropertyCategoryProps> = ({ onSelectCategory }) => {
   return (
-    <section id="categories" className="py-14 md:py-18 bg-[#0a0b0d] relative border-b border-white/5">
+    <section id="categories" className="py-8 sm:py-14 md:py-18 bg-[#0a0b0d] relative border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <SectionHeader
@@ -77,43 +77,43 @@ export const PropertyCategory: React.FC<PropertyCategoryProps> = ({ onSelectCate
           description="Explore the specifications, configurations, and core features of Garden Green Gated Community at Aalampallam Palakkad."
         />
 
-        {/* Custom Visual Vector Tiles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Custom Visual Vector Tiles Grid: 2 cols on mobile, 3 cols on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
           {servicesData.map((service: ServiceCategory, idx: number) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
               onClick={() => onSelectCategory(service.filterKey)}
-              className="group relative h-80 overflow-hidden border border-white/5 hover:border-[#c5a880]/40 cursor-pointer transition-all duration-500 bg-[#121418] rounded-2xl flex flex-col justify-between p-6 sm:p-8 shadow-lg hover:shadow-2xl"
+              className="group relative h-56 sm:h-80 overflow-hidden border border-white/5 hover:border-[#c5a880]/40 cursor-pointer transition-all duration-500 bg-[#121418] rounded-xl sm:rounded-2xl flex flex-col justify-between p-4 sm:p-8 shadow-lg hover:shadow-2xl"
             >
               {/* Top accent light glow strip */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#c5a880]/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
               {/* Card Header: Serif number and arrow */}
               <div className="flex justify-between items-start z-10">
-                <span className="font-serif text-3xl font-light text-[#c5a880] tracking-tight">{service.number}</span>
-                <div className="w-10 h-10 glass-panel border border-[#c5a880]/20 rounded-full flex items-center justify-center group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d] transition-all duration-300">
-                  <ArrowUpRight className="w-4 h-4 text-[#c5a880] group-hover:text-[#0a0b0d]" />
+                <span className="font-serif text-xl sm:text-3xl font-light text-[#c5a880] tracking-tight">{service.number}</span>
+                <div className="w-7 h-7 sm:w-10 sm:h-10 glass-panel border border-[#c5a880]/20 rounded-full flex items-center justify-center group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d] transition-all duration-300">
+                  <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4 text-[#c5a880] group-hover:text-[#0a0b0d]" />
                 </div>
               </div>
 
               {/* Centered SVG Logo with Hover Animation */}
-              <div className="flex justify-center items-center py-4 transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 z-10">
+              <div className="flex justify-center items-center py-2 sm:py-4 transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 z-10">
                 {renderCategoryLogo(service.id)}
               </div>
 
               {/* Card Footer Content */}
               <div className="z-10 mt-auto">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#c5a880] font-semibold mb-1.5 block">
+                <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[#c5a880] font-semibold mb-0.5 sm:mb-1.5 block line-clamp-1">
                   {service.tagline}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#f4f1ea] mb-2 group-hover:text-[#c5a880] transition-colors duration-300">
+                <h3 className="font-serif text-sm sm:text-2xl font-normal text-[#f4f1ea] mb-1 sm:mb-2 group-hover:text-[#c5a880] transition-colors duration-300 line-clamp-1 sm:line-clamp-none">
                   {service.title}
                 </h3>
-                <p className="text-xs text-[#9e9a90] font-light leading-relaxed transition-colors duration-500 group-hover:text-[#d8d2c5]">
+                <p className="text-[10px] sm:text-xs text-[#9e9a90] font-light leading-relaxed transition-colors duration-500 group-hover:text-[#d8d2c5] line-clamp-2 sm:line-clamp-none">
                   {service.description}
                 </p>
               </div>

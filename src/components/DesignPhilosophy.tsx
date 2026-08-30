@@ -54,7 +54,7 @@ export const DesignPhilosophy: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="py-14 md:py-18 bg-[#0d0e12] relative border-b border-white/5 overflow-hidden">
+    <section id="gallery" className="py-8 sm:py-14 md:py-18 bg-[#0d0e12] relative border-b border-white/5 overflow-hidden">
       {/* Glow effects */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#c5a880]/5 rounded-full blur-3xl pointer-events-none transform -translate-y-1/2" />
 
@@ -68,12 +68,12 @@ export const DesignPhilosophy: React.FC = () => {
         />
 
         {/* Dynamic Infinite Scroll Marquee */}
-        <div className="relative w-full py-6 bg-[#121418] border-y border-[#c5a880]/15 overflow-hidden my-10">
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0d0e12] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0d0e12] to-transparent z-10 pointer-events-none" />
+        <div className="relative w-full py-3 sm:py-6 bg-[#121418] border-y border-[#c5a880]/15 overflow-hidden my-6 sm:my-10">
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#0d0e12] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#0d0e12] to-transparent z-10 pointer-events-none" />
           
           <motion.div 
-            className="flex gap-16 whitespace-nowrap"
+            className="flex gap-8 sm:gap-16 whitespace-nowrap"
             animate={{ x: [0, -1200] }}
             transition={{
               ease: "linear",
@@ -85,50 +85,50 @@ export const DesignPhilosophy: React.FC = () => {
             {[...marqueeText1, ...marqueeText1].map((text, idx) => (
               <span 
                 key={idx} 
-                className="font-serif text-sm sm:text-base md:text-lg font-normal tracking-[0.25em] text-[#c5a880]/70 flex items-center gap-4 uppercase"
+                className="font-serif text-xs sm:text-base md:text-lg font-normal tracking-[0.2em] sm:tracking-[0.25em] text-[#c5a880]/70 flex items-center gap-3 sm:gap-4 uppercase"
               >
                 <span>{text}</span>
-                <span className="w-1.5 h-1.5 bg-[#c5a880] rounded-full"></span>
+                <span className="w-1 sm:w-1.5 h-1 sm:h-1.5 bg-[#c5a880] rounded-full"></span>
               </span>
             ))}
           </motion.div>
         </div>
 
-        {/* Bento Grid Specifications */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+        {/* Bento Grid Specifications: 2 cols on mobile */}
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-8 mt-6 sm:mt-12">
           {specItems.map((spec, idx) => {
             const IconComp = spec.icon;
             return (
               <motion.div
                 key={spec.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group relative p-8 sm:p-10 bg-[#121418] border border-white/5 hover:border-[#c5a880]/40 rounded-2xl transition-all duration-500 shadow-lg flex flex-col justify-between"
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                className="group relative p-4 sm:p-10 bg-[#121418] border border-white/5 hover:border-[#c5a880]/40 rounded-xl sm:rounded-2xl transition-all duration-500 shadow-lg flex flex-col justify-between"
               >
                 {/* Subtle border light glow */}
-                <div className="absolute inset-0 border border-[#c5a880]/0 group-hover:border-[#c5a880]/20 rounded-2xl transition-all duration-500 pointer-events-none" />
+                <div className="absolute inset-0 border border-[#c5a880]/0 group-hover:border-[#c5a880]/20 rounded-xl sm:rounded-2xl transition-all duration-500 pointer-events-none" />
                 
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#c5a880]/5 border border-[#c5a880]/30 flex items-center justify-center text-[#c5a880] transition-colors group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d]">
-                      <IconComp className="w-5.5 h-5.5" />
+                  <div className="flex items-center justify-between mb-3 sm:mb-6">
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-[#c5a880]/5 border border-[#c5a880]/30 flex items-center justify-center text-[#c5a880] transition-colors group-hover:bg-[#c5a880] group-hover:text-[#0a0b0d]">
+                      <IconComp className="w-4 h-4 sm:w-5.5 sm:h-5.5" />
                     </div>
-                    <span className="text-[10px] font-mono tracking-widest text-[#c5a880]/50 uppercase font-semibold">
+                    <span className="text-[8px] sm:text-[10px] font-mono tracking-widest text-[#c5a880]/50 uppercase font-semibold line-clamp-1">
                       {spec.subtitle}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#f4f1ea] mb-3 group-hover:text-[#c5a880] transition-colors">
+                  <h3 className="font-serif text-sm sm:text-2xl font-normal text-[#f4f1ea] mb-1 sm:mb-3 group-hover:text-[#c5a880] transition-colors line-clamp-1 sm:line-clamp-none">
                     {spec.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#9e9a90] font-light leading-relaxed">
+                  <p className="text-[10px] sm:text-sm text-[#9e9a90] font-light leading-relaxed line-clamp-2 sm:line-clamp-none">
                     {spec.description}
                   </p>
                 </div>
 
-                <div className="w-12 h-[1px] bg-white/5 group-hover:bg-[#c5a880]/30 transition-colors mt-6" />
+                <div className="w-8 sm:w-12 h-[1px] bg-white/5 group-hover:bg-[#c5a880]/30 transition-colors mt-3 sm:mt-6" />
               </motion.div>
             );
           })}
