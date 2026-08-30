@@ -51,15 +51,14 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
           </div>
         </div>
 
-        {/* Immersive Project Cards Grid: Touch Horizontal Scroll on Mobile, 3-Col Grid on Desktop */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Immersive Project Cards Grid: 2 Cards Per Row on Small Screens, 3 Cards Per Row on Desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center shrink-0 md:shrink flex flex-col">
-              <ProjectCard
-                project={project}
-                onExplore={onSelectProject}
-              />
-            </div>
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onExplore={onSelectProject}
+            />
           ))}
         </div>
 
