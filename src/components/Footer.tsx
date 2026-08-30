@@ -222,7 +222,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-row items-center justify-between text-[10px] text-[#9e9a90] font-light">
-          <p>© {new Date().getFullYear()} Pathamnumber Dreamland Properties Pvt Ltd. | DWC MEDIA 761 000 000 | All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Pathamnumber Dreamland Properties Pvt Ltd. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <button
