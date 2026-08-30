@@ -7,32 +7,32 @@ export interface FeatureItemData {
 export const whyUsData: FeatureItemData[] = [
   {
     number: '01',
-    title: 'Thoughtful Locations',
-    description: 'We focus on properties where location, accessibility and surrounding development matter.'
+    title: '1.88 Acres Masterplan',
+    description: 'Comprising just 22 luxury villas at Aalampallam, Palakkad. Living in open spaces with an open mind.'
   },
   {
     number: '02',
-    title: 'Quality First',
-    description: 'Every property should reflect attention to planning, design and overall quality.'
+    title: 'Inspired by Nature',
+    description: 'Best use of lands with abundant sunlight, fresh air, and scenic greenery, making it a cool haven for all residents.'
   },
   {
     number: '03',
-    title: 'Transparent Approach',
-    description: 'Clear communication and straightforward property information throughout the buying journey.'
+    title: 'Upto 95% Bank Loans',
+    description: 'Plots and villas approved for financial assistance up to 95% bank loans for smooth, stress-free home buying.'
   },
   {
     number: '04',
-    title: 'Modern Living',
-    description: 'We focus on spaces that support comfortable, practical and contemporary lifestyles.'
+    title: 'Up to 25% Yearly Growth',
+    description: 'A solid real estate investment. The value of the land increases with the resources up to 25% yearly itself.'
   },
   {
     number: '05',
-    title: 'Long-Term Value',
-    description: 'Property decisions should be made with both today’s needs and tomorrow’s possibilities in mind.'
+    title: 'Secured Gated Living',
+    description: 'Peaceful life within a secured development featuring 24x7 manned security cabin and CCTV surveillance.'
   },
   {
     number: '06',
-    title: 'Personal Guidance',
-    description: 'Help customers understand their options and make confident property decisions.'
+    title: 'Necessities Within Reach',
+    description: 'Enjoy an unhurried pace with schooling, railway transit, bus hubs, and medical care within a 1 to 5 km radius.'
   }
 ];

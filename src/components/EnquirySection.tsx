@@ -6,12 +6,12 @@ interface EnquirySectionProps {
   initialPropertyInterest?: string;
 }
 
-export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyInterest = 'Villa Construction' }) => {
+export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyInterest = '2 BHK Villa' }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
-    serviceInterest: 'Villa Construction',
+    serviceInterest: '2 BHK Villa',
     message: ''
   });
 
@@ -20,15 +20,17 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
   useEffect(() => {
     if (initialPropertyInterest) {
       if (initialPropertyInterest.includes('Plot') || initialPropertyInterest.includes('Land')) {
-        setFormData((prev) => ({ ...prev, serviceInterest: 'Land Development' }));
-      } else if (initialPropertyInterest.includes('Consult')) {
-        setFormData((prev) => ({ ...prev, serviceInterest: 'Property Consultation' }));
-      } else if (initialPropertyInterest.includes('Renov')) {
-        setFormData((prev) => ({ ...prev, serviceInterest: 'Renovation Works' }));
-      } else if (initialPropertyInterest.includes('Interior')) {
-        setFormData((prev) => ({ ...prev, serviceInterest: 'Interior Designing' }));
+        setFormData((prev) => ({ ...prev, serviceInterest: 'Gated Plot' }));
+      } else if (initialPropertyInterest.includes('1 BHK') || initialPropertyInterest.includes('1BHK') || initialPropertyInterest.includes('01')) {
+        setFormData((prev) => ({ ...prev, serviceInterest: '1 BHK Villa' }));
+      } else if (initialPropertyInterest.includes('2 BHK') || initialPropertyInterest.includes('2BHK') || initialPropertyInterest.includes('02')) {
+        setFormData((prev) => ({ ...prev, serviceInterest: '2 BHK Villa' }));
+      } else if (initialPropertyInterest.includes('3 BHK') || initialPropertyInterest.includes('3BHK') || initialPropertyInterest.includes('03')) {
+        setFormData((prev) => ({ ...prev, serviceInterest: '3 BHK Villa' }));
+      } else if (initialPropertyInterest.includes('4 BHK') || initialPropertyInterest.includes('4BHK') || initialPropertyInterest.includes('04')) {
+        setFormData((prev) => ({ ...prev, serviceInterest: '4 BHK Villa' }));
       } else {
-        setFormData((prev) => ({ ...prev, serviceInterest: 'Villa Construction' }));
+        setFormData((prev) => ({ ...prev, serviceInterest: '2 BHK Villa' }));
       }
     }
   }, [initialPropertyInterest]);
@@ -43,11 +45,11 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
     const nameStr = formData.name ? `Name: ${formData.name}` : '';
     const phoneStr = formData.phone ? `Phone: ${formData.phone}` : '';
     const emailStr = formData.email ? `Email: ${formData.email}` : '';
-    const serviceStr = `Service Interest: ${formData.serviceInterest}`;
+    const serviceStr = `Interested In: ${formData.serviceInterest}`;
     const msgStr = formData.message ? `Message: ${formData.message}` : '';
 
     const textPayload = [
-      `*New Property Enquiry - Dreamland Properties*`,
+      `*New Enquiry - Garden Green Aalampallam*`,
       nameStr,
       phoneStr,
       emailStr,
@@ -103,7 +105,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
                         Office Address
                       </span>
                       <p className="text-xs text-[#f4f1ea] font-sans leading-relaxed">
-                        Dev Arcade, Near Polytechnic College, Marutharode, Koottupaatha, Palakkad
+                        Dev Arcade, Near Polytechnic College, Marutharode, Kootupatha, Palakkad
                       </p>
                     </div>
                   </div>
@@ -118,10 +120,10 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
                       </span>
                       <div className="flex flex-col gap-0.5 text-xs text-[#f4f1ea] font-mono">
                         <a href="https://wa.me/916282844739" target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors">
-                          +91 62828 44739
+                          +91 6282 844 739
                         </a>
                         <a href="https://wa.me/916282844608" target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors">
-                          +91 62828 44608
+                          +91 6282 844 608
                         </a>
                       </div>
                     </div>
@@ -141,6 +143,79 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
                     </div>
                   </div>
                 </div>
+
+                {/* Google Maps QR Code Card */}
+                <a
+                  href="https://maps.google.com/?q=Garden+Green+Aalampallam+Palakkad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-6 p-4 bg-[#0a0b0d] border border-[#c5a880]/20 hover:border-[#c5a880]/60 flex items-center gap-4 transition-all duration-300 rounded-lg shadow-inner"
+                  title="Open Aalampallam on Google Maps"
+                >
+                  <div className="p-2 bg-white rounded-md shrink-0 flex items-center justify-center">
+                    {/* SVG Vector QR Code - Aesthetic & Functional representation */}
+                    <svg viewBox="0 0 29 29" className="w-14 h-14 text-black fill-current">
+                      {/* Top-Left Finder */}
+                      <rect x="0" y="0" width="7" height="7" />
+                      <rect x="1" y="1" width="5" height="5" fill="white" />
+                      <rect x="2" y="2" width="3" height="3" />
+                      
+                      {/* Top-Right Finder */}
+                      <rect x="22" y="0" width="7" height="7" />
+                      <rect x="23" y="1" width="5" height="5" fill="white" />
+                      <rect x="24" y="2" width="3" height="3" />
+                      
+                      {/* Bottom-Left Finder */}
+                      <rect x="0" y="22" width="7" height="7" />
+                      <rect x="1" y="23" width="5" height="5" fill="white" />
+                      <rect x="2" y="24" width="3" height="3" />
+                      
+                      {/* Alignment block */}
+                      <rect x="20" y="20" width="5" height="5" />
+                      <rect x="21" y="21" width="3" height="3" fill="white" />
+                      <rect x="22" y="22" width="1" height="1" />
+
+                      {/* Timing patterns & randomized dots representing Google Maps link */}
+                      <rect x="8" y="2" width="2" height="1" />
+                      <rect x="12" y="2" width="1" height="2" />
+                      <rect x="15" y="1" width="2" height="2" />
+                      <rect x="18" y="3" width="1" height="1" />
+                      <rect x="20" y="2" width="1" height="2" />
+                      
+                      <rect x="2" y="8" width="1" height="2" />
+                      <rect x="2" y="12" width="2" height="1" />
+                      <rect x="1" y="15" width="2" height="2" />
+                      <rect x="3" y="18" width="1" height="1" />
+                      <rect x="2" y="20" width="2" height="1" />
+
+                      {/* Random data grid dots */}
+                      <rect x="9" y="8" width="2" height="2" />
+                      <rect x="13" y="9" width="3" height="1" />
+                      <rect x="18" y="8" width="1" height="3" />
+                      <rect x="10" y="13" width="2" height="1" />
+                      <rect x="14" y="12" width="1" height="4" />
+                      <rect x="17" y="14" width="3" height="2" />
+                      <rect x="8" y="18" width="3" height="1" />
+                      <rect x="12" y="19" width="1" height="2" />
+                      <rect x="15" y="18" width="2" height="3" />
+                      
+                      <rect x="24" y="9" width="2" height="2" />
+                      <rect x="23" y="13" width="3" height="1" />
+                      <rect x="25" y="16" width="1" height="3" />
+                      <rect x="9" y="24" width="2" height="2" />
+                      <rect x="13" y="25" width="3" height="1" />
+                      <rect x="18" y="24" width="1" height="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-[0.2em] text-[#c5a880] block mb-0.5 font-bold">
+                      Google Maps QR Code
+                    </span>
+                    <p className="text-xs text-[#d8d2c5] font-light leading-relaxed">
+                      Scan or tap to open Aalampallam Palakkad route mapping.
+                    </p>
+                  </div>
+                </a>
               </div>
 
               {/* Direct Brochure Download Action */}
@@ -231,7 +306,7 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
 
                     <div>
                       <label className="block text-[11px] uppercase tracking-[0.2em] text-[#c5a880] font-medium mb-2">
-                        Service Interest *
+                        Villa / Plot Interest *
                       </label>
                       <select
                         name="serviceInterest"
@@ -239,11 +314,11 @@ export const EnquirySection: React.FC<EnquirySectionProps> = ({ initialPropertyI
                         onChange={handleChange}
                         className="w-full px-4 py-3.5 bg-[#0a0b0d] border border-white/10 focus:border-[#c5a880] text-sm text-[#f4f1ea] focus:outline-none transition-colors cursor-pointer"
                       >
-                        <option value="Villa Construction">Villa Construction</option>
-                        <option value="Land Development">Land Development</option>
-                        <option value="Property Consultation">Property Consultation</option>
-                        <option value="Renovation Works">Renovation Works</option>
-                        <option value="Interior Designing">Interior Designing</option>
+                        <option value="1 BHK Villa">1 BHK Villa (1000 Sqft)</option>
+                        <option value="2 BHK Villa">2 BHK Villa (1500 Sqft)</option>
+                        <option value="3 BHK Villa">3 BHK Villa (2200 Sqft)</option>
+                        <option value="4 BHK Villa">4 BHK Villa (3000 Sqft)</option>
+                        <option value="Gated Plot">Premium Gated Plot</option>
                       </select>
                     </div>
                   </div>

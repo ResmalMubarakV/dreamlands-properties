@@ -18,7 +18,7 @@ const leadershipData: LeadershipMember[] = [
     name: 'Anil Chacko',
     role: 'Managing Director',
     badge: 'Executive Leadership',
-    description: 'With strong leadership and vision, Anil Chacko drives Dreamland Properties towards delivering high-quality residential developments focused on trust, value, and modern living.',
+    description: 'With strong leadership and vision, Anil Chacko drives PATHAMNUMBER DREAMLAND PROPERTIES PVT LTD towards delivering high-quality, nature-inspired residential developments focused on trust and modern gated living.',
     initials: 'AC'
   },
   {
@@ -26,7 +26,7 @@ const leadershipData: LeadershipMember[] = [
     name: 'Ratheesh Rajan',
     role: 'Senior Manager',
     badge: 'Operations & Quality Control',
-    description: 'Ratheesh Rajan ensures smooth execution of projects and maintains high standards in customer experience, quality control, and timely delivery.',
+    description: 'Ratheesh Rajan ensures smooth execution of projects, strict adherence to site planning boundaries, and maintains high standards in customer experience and timely property handovers.',
     initials: 'RR'
   }
 ];
@@ -106,3 +106,5 @@ export const LeadershipTeam: React.FC = () => {
     </section>
   );
 };
+
+export default LeadershipTeam;

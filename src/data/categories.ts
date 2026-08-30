@@ -4,54 +4,56 @@ export interface ServiceCategory {
   title: string;
   tagline: string;
   description: string;
-  image: string;
   filterKey: 'Villa Construction' | 'Land Development' | 'Property Consultation' | 'Renovation Works' | 'Interior Designing';
 }
 
 export const servicesData: ServiceCategory[] = [
   {
-    id: 'villa-construction',
+    id: 'masterplan',
     number: '01',
-    title: 'Villa Construction',
-    tagline: 'Architectural Excellence',
-    description: 'Custom contemporary villas engineered for structural perfection, modern comfort, and climate harmony.',
-    image: '/assets/hero_villa_dark.jpg',
-    filterKey: 'Villa Construction'
-  },
-  {
-    id: 'land-development',
-    number: '02',
-    title: 'Land Development',
-    tagline: 'Strategic Masterplanning',
-    description: 'Premier residential plot layouts featuring wide paved roads, clear titles, and high capital growth potential.',
-    image: '/assets/project_plots.jpg',
+    title: '1.88 Acres Masterplan',
+    tagline: 'Scenic Aalampallam Palakkad',
+    description: 'A masterplanned gated enclave designed for privacy, abundant natural light, fresh air and a relaxed pace.',
     filterKey: 'Land Development'
   },
   {
-    id: 'property-consultation',
+    id: 'villa-community',
+    number: '02',
+    title: '22 Exclusive Villas',
+    tagline: 'Gated Villa Living',
+    description: 'Comprising just 22 modern villas, offering space, safety, proper drainage systems, and a green environment.',
+    filterKey: 'Villa Construction'
+  },
+  {
+    id: 'bhk-options',
     number: '03',
-    title: 'Property Consultation',
-    tagline: 'Principled Guidance',
-    description: 'Transparent real-estate advice helping buyers and investors identify high-value residential opportunities in Palakkad.',
-    image: '/assets/palakkad_landscape.jpg',
-    filterKey: 'Property Consultation'
+    title: '1, 2, 3, 4 BHK Configurations',
+    tagline: '1000 to 3000 Sqft Layouts',
+    description: 'Flexible architectural designs with doors and windows wide open to welcome you in each day.',
+    filterKey: 'Villa Construction'
   },
   {
-    id: 'renovation-works',
+    id: 'bank-loans',
     number: '04',
-    title: 'Renovation Works',
-    tagline: 'Structural Revival',
-    description: 'Full-scale luxury residential restoration blending traditional craftsmanship with contemporary amenities.',
-    image: '/assets/brand_editorial_arch.jpg',
-    filterKey: 'Renovation Works'
+    title: 'Upto 95% Bank Loans',
+    tagline: 'Hassle-Free Financing',
+    description: 'Plots and villas approved for financial assistance up to 95% from leading banks.',
+    filterKey: 'Land Development'
   },
   {
-    id: 'interior-designing',
+    id: 'gated-amenities',
     number: '05',
-    title: 'Interior Designing',
-    tagline: 'Sanctuary Interiors',
-    description: 'Bespoke spatial design, acoustic paneling, ambient lighting, and high-end material selection.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85',
-    filterKey: 'Interior Designing'
+    title: 'Amenities & Common Park',
+    tagline: 'Modern Community Lifestyle',
+    description: 'Featuring 24x7 security cabin, CCTV, solar street lights, proper drainage, and a green park for all residents.',
+    filterKey: 'Land Development'
+  },
+  {
+    id: 'value-growth',
+    number: '06',
+    title: '25% Yearly Appreciation',
+    tagline: 'High Investment Value',
+    description: 'A high-value land investment where value increases with local resources up to 25% yearly itself.',
+    filterKey: 'Land Development'
   }
 ];

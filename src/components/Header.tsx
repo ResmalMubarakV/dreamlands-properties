@@ -133,7 +133,7 @@ export const Header: React.FC = () => {
           <div className="hidden xl:flex items-center gap-3 flex-shrink-0">
             {/* Direct WhatsApp Quick Link */}
             <a
-              href="https://wa.me/916282844739?text=Hello%20Dreamland%20Properties%2C%20I%20am%20enquiring%20about%20your%20services."
+              href="https://wa.me/916282844739?text=Hello%20Dreamland%20Properties%2C%20I%20am%20enquiring%20about%20Garden%20Green%20villas%20in%20Aalampallam%2C%20Palakkad."
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg bg-white/5 hover:bg-[#25D366]/20 border border-white/10 hover:border-[#25D366]/50 text-[#25D366] transition-all duration-300"
@@ -211,7 +211,7 @@ export const Header: React.FC = () => {
 
               <div className="pt-3 border-t border-white/10 flex flex-col gap-3">
                 <a
-                  href="https://wa.me/916282844739?text=Hello%20Dreamland%20Properties%2C%20I%20am%20enquiring%20about%20your%20services."
+                  href="https://wa.me/916282844739?text=Hello%20Dreamland%20Properties%2C%20I%20am%20enquiring%20about%20Garden%20Green%20villas%20in%20Aalampallam%2C%20Palakkad."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-lg bg-[#25D366]/10 border border-[#25D366]/40 text-[#25D366] text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"

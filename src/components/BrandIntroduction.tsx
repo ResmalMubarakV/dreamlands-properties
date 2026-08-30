@@ -28,25 +28,30 @@ export const BrandIntroduction: React.FC = () => {
 
             {/* Heading */}
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-[#f4f1ea] leading-[1.12] tracking-tight mb-8">
-              More than property.<br />
-              <span className="italic text-[#c5a880]">A better place to belong.</span>
+              Your Land, Your Villa!<br />
+              <span className="italic text-[#c5a880]">Inspired by nature.</span>
             </h2>
 
             {/* Content paragraph 1 */}
             <p className="text-base sm:text-xl text-[#d8d2c5] font-light leading-relaxed mb-6">
-              Dreamland Properties focuses on creating and presenting thoughtfully selected residential spaces that combine location, design, comfort and long-term value.
+              Imagine a place of your own. A house that is truly yours, with its doors and windows wide open to welcome you in each day.
             </p>
 
             {/* Content paragraph 2 */}
+            <p className="text-sm sm:text-base text-[#9e9a90] font-light leading-relaxed mb-4">
+              We at Dreamland Properties believe the best things in life come in small packages. Dreamland Properties 'Garden Green' comprising of just 22 villas is all about living in open spaces with an open mind, where quality of life meets quality of living.
+            </p>
+
+            {/* Content paragraph 3 */}
             <p className="text-sm sm:text-base text-[#9e9a90] font-light leading-relaxed">
-              Our approach is simple: understand what people need, identify better opportunities and present properties with clarity and confidence.
+              Making the best use of lands with abundant sunlight and fresh air, we assure you a peaceful life in a secure development at Aalampallam, Palakkad. The value of the land increases with the resources up to 25% yearly itself.
             </p>
 
             {/* Subtle Brand Ethos Callout */}
             <div className="mt-10 pt-8 border-t border-[#c5a880]/20 flex items-center gap-6">
               <div className="text-3xl font-serif italic text-[#c5a880]">"</div>
               <p className="text-xs sm:text-sm font-light uppercase tracking-[0.2em] text-[#e6e1d7]">
-                Curating better spaces for you — Palakkad, Kerala
+                Garden Green Gated Villa Enclave — Aalampallam, Palakkad
               </p>
             </div>
           </motion.div>

@@ -7,11 +7,10 @@ import { FeaturedProjects } from './components/FeaturedProjects';
 import { PropertyCategory } from './components/PropertyCategory';
 import { WhyDreamlands } from './components/WhyDreamlands';
 import { PalakkadSection } from './components/PalakkadSection';
-import { Gallery } from './components/Gallery';
-import { Process } from './components/Process';
+import { DesignPhilosophy } from './components/DesignPhilosophy';
+import { Amenities } from './components/Amenities';
 import { AboutCompany } from './components/AboutCompany';
 import { LeadershipTeam } from './components/LeadershipTeam';
-import { TrustSection } from './components/TrustSection';
 import { EnquirySection } from './components/EnquirySection';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
@@ -95,11 +94,11 @@ function MainLandingContent() {
         {/* 6. Palakkad Section */}
         <PalakkadSection />
 
-        {/* 7. Cinematic Gallery */}
-        <Gallery />
+        {/* 7. Design Philosophy */}
+        <DesignPhilosophy />
 
-        {/* 8. Property Experience / Process */}
-        <Process />
+        {/* 8. Gated Amenities */}
+        <Amenities />
 
         {/* 9. About Company */}
         <AboutCompany onContactClick={() => scrollToEnquiry()} />
@@ -107,10 +106,7 @@ function MainLandingContent() {
         {/* 10. Leadership Team */}
         <LeadershipTeam />
 
-        {/* 11. Trust Section */}
-        <TrustSection />
-
-        {/* 12. Enquiry Section */}
+        {/* 11. Enquiry Section */}
         <EnquirySection initialPropertyInterest={selectedServiceInterest} />
       </main>
 

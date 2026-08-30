@@ -18,9 +18,9 @@ export const PalakkadSection: React.FC = () => {
         
         {/* Section Header */}
         <SectionHeader
-          eyebrow="GEOGRAPHIC CONTEXT"
-          title="Rooted in Palakkad. Designed for what comes next."
-          description="Palakkad offers a distinctive blend of peaceful natural greenery, Western Ghats breezes, and well-connected residential development."
+          eyebrow="LOCATION CONTEXT"
+          title="Centred at Aalampallam Palakkad."
+          description="A peaceful life within a secured development and necessities within your reach, in an unhurried pace. Nature surrounding the villas makes it a cool haven."
         />
 
         {/* Top Hero Landscape Composition */}
@@ -72,14 +72,14 @@ export const PalakkadSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
             <div>
               <span className="text-xs uppercase tracking-[0.2em] text-[#c5a880] font-semibold block mb-1">
-                INTERACTIVE ZONE EXPLORER
+                PROXIMITY RADAR
               </span>
               <h3 className="font-serif text-2xl text-[#f4f1ea]">
-                Key Residential Pockets of Palakkad
+                Amenities &amp; Facilities Nearby
               </h3>
             </div>
             <p className="text-xs text-[#9e9a90] font-light max-w-sm">
-              Explore primary residential corridors carefully evaluated by Dreamland Properties.
+              Explore educational hubs, transportation, junctions and hospitals located close to Garden Green at Aalampallam.
             </p>
           </div>
 

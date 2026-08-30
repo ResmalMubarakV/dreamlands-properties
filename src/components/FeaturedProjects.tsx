@@ -14,9 +14,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
   const filterOptions = [
     'All',
     'Villa Construction',
-    'Land Development',
-    'Renovation Works',
-    'Interior Designing'
+    'Land Development'
   ];
 
   const filteredProjects = activeFilter === 'All'
@@ -30,9 +28,9 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <SectionHeader
-            eyebrow="PORTFOLIO"
-            title="Featured Projects"
-            description="Explore our curated portfolio of residential villas, land developments, structural renovations, and luxury interiors in Palakkad."
+            eyebrow="VILLA &amp; PLOT MODELS"
+            title="Garden Green Configurations"
+            description="Explore our curated residential villa configurations and gated land plot opportunities at Aalampallam Palakkad."
           />
 
           {/* Category Filter Tabs */}

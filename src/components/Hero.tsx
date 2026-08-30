@@ -248,16 +248,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
               <div className="inline-flex items-center gap-3 mb-3 sm:mb-4">
                 <span className="h-px w-8 bg-[#c5a880]"></span>
                 <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#c5a880] uppercase font-serif drop-shadow-md">
-                  DREAMLAND PROPERTIES • PALAKKAD
+                  PATHAMNUMBER DREAMLAND PROPERTIES
                 </span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-medium text-[#ffffff] leading-[1.1] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-                Curating better spaces for you.
+                Garden Green at Aalampallam Palakkad.
               </h1>
 
               <p className="text-xs sm:text-lg text-[#e6e1d7] font-light leading-relaxed mb-6 sm:mb-8 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
-                Villa Construction, Land Development, Property Consultation, Renovation Works &amp; Interior Designing.
+                Inspired by nature! Comprising of just 22 luxury villas, offering open spaces with an open mind, where quality meets style.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -265,7 +265,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
                   onClick={onExploreClick}
                   className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#c5a880] text-[#0a0b0d] text-xs font-semibold uppercase tracking-[0.2em] hover:bg-[#e2c99b] transition-all duration-300 shadow-[0_0_30px_rgba(197,168,128,0.35)]"
                 >
-                  <span>Explore Offerings</span>
+                  <span>Explore Villa Models</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
 
@@ -283,24 +283,24 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
               <div className="inline-flex items-center gap-3 mb-3 sm:mb-4">
                 <span className="h-px w-8 bg-[#c5a880]"></span>
                 <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#c5a880] uppercase font-serif drop-shadow-md">
-                  01 • VILLA &amp; LAND DEVELOPMENT
+                  01 • YOUR LAND, YOUR VILLA!
                 </span>
               </div>
 
               <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium text-[#ffffff] leading-[1.15] tracking-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-                Modern Aesthetics Meets Structural Excellence.
+                Define the Contours of Your Dreams.
               </h2>
 
               <p className="text-xs sm:text-base text-[#e6e1d7] font-light leading-relaxed mb-6 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
-                Bespoke villa construction and masterplanned plot developments across prime growth belts of Palakkad.
+                Imagine a place of your own. A house that is truly yours, with its doors and windows wide open to welcome you in each day at Aalampallam.
               </p>
 
               <div className="flex flex-wrap gap-2">
                 <span className="px-3.5 py-1.5 backdrop-blur-md text-[10px] uppercase tracking-[0.15em] text-[#c5a880] border border-[#c5a880]/50 font-semibold bg-[#0a0b0d]/50 shadow-md">
-                  Villa Construction
+                  1.88 Acres Land
                 </span>
                 <span className="px-3.5 py-1.5 backdrop-blur-md text-[10px] uppercase tracking-[0.15em] text-[#ffffff] border border-white/30 bg-[#0a0b0d]/50 shadow-md">
-                  Land Masterplanning
+                  22 Villas Gated Enclave
                 </span>
               </div>
             </motion.div>
@@ -310,24 +310,24 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
               <div className="inline-flex items-center gap-3 mb-3 sm:mb-4">
                 <span className="h-px w-8 bg-[#c5a880]"></span>
                 <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#c5a880] uppercase font-serif drop-shadow-md">
-                  02 • INTERIORS &amp; RENOVATION
+                  02 • VILLA CONFIGURATIONS
                 </span>
               </div>
 
               <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium text-[#ffffff] leading-[1.15] tracking-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-                Renovation &amp; Interior Sanctuary Design.
+                1, 2, 3, 4 BHK Premium Models.
               </h2>
 
               <p className="text-xs sm:text-base text-[#e6e1d7] font-light leading-relaxed mb-6 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
-                Transforming residential structures with bespoke material selection, acoustic wood paneling, and ambient lighting.
+                Ranging from 1000 Sqft to 3000 Sqft layout designs, offering abundant sunlight, fresh air, and proper drainage systems.
               </p>
 
               <div className="flex flex-wrap gap-2">
                 <span className="px-3.5 py-1.5 backdrop-blur-md text-[10px] uppercase tracking-[0.15em] text-[#c5a880] border border-[#c5a880]/50 font-semibold bg-[#0a0b0d]/50 shadow-md">
-                  Interior Designing
+                  1000 - 3000 Sqft Range
                 </span>
                 <span className="px-3.5 py-1.5 backdrop-blur-md text-[10px] uppercase tracking-[0.15em] text-[#ffffff] border border-white/30 bg-[#0a0b0d]/50 shadow-md">
-                  Renovation Works
+                  Solar Street Lights
                 </span>
               </div>
             </motion.div>
@@ -337,16 +337,16 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onContactClick }) =>
               <div className="inline-flex items-center gap-3 mb-3 sm:mb-4">
                 <span className="h-px w-8 bg-[#c5a880]"></span>
                 <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] text-[#c5a880] uppercase font-serif drop-shadow-md">
-                  03 • ENDURING VALUE
+                  03 • INVESTMENT &amp; LOANS
                 </span>
               </div>
 
               <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium text-[#ffffff] leading-[1.15] tracking-tight mb-4 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-                Where your plans become home.
+                Upto 95% Bank Loan Available.
               </h2>
 
               <p className="text-xs sm:text-base text-[#e6e1d7] font-light leading-relaxed mb-6 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
-                Explore our curated residential portfolio and speak directly with our team at Dev Arcade, Palakkad.
+                Land and resource value increases up to 25% yearly itself. Secure your family's future at an unhurried pace.
               </p>
 
               <div className="flex flex-wrap gap-3">

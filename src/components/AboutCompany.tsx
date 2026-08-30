@@ -64,25 +64,25 @@ export const AboutCompany: React.FC<AboutCompanyProps> = ({ onContactClick }) =>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="h-px w-6 bg-[#c5a880]"></span>
               <span className="text-xs font-semibold tracking-[0.25em] text-[#c5a880] uppercase">
-                ABOUT DREAMLAND PROPERTIES
+                ABOUT PATHAMNUMBER DREAMLAND PROPERTIES
               </span>
             </div>
 
             {/* Main Heading */}
             <h2 className="font-serif text-3xl sm:text-5xl font-normal text-[#f4f1ea] leading-[1.15] tracking-tight mb-8">
-              Built around better spaces.
+              PATHAMNUMBER DREAMLAND PROPERTIES PVT LTD
             </h2>
 
             {/* Paragraphs */}
             <div className="space-y-5 text-base sm:text-lg font-light text-[#d8d2c5] leading-relaxed mb-8">
               <p>
-                Dreamland Properties is a premier real-estate and property development brand based at Dev Arcade, Marutharode, Palakkad.
+                PATHAMNUMBER DREAMLAND PROPERTIES PVT LTD is a premier real-estate and property development brand based in Palakkad, Kerala.
               </p>
               <p>
-                We offer a comprehensive suite of residential services: <strong className="text-[#c5a880] font-normal">Villa Construction, Land Development, Property Consultation, Renovation Works,</strong> and <strong className="text-[#c5a880] font-normal">Interior Designing</strong>.
+                Our flagship gated enclave project, <strong className="text-[#c5a880] font-normal">Garden Green at Aalampallam</strong>, offers an exclusive sanctuary of 22 premium villas and plots built around security, proper drainage, and natural light.
               </p>
               <p className="text-[#f4f1ea] font-serif text-xl italic pt-2 border-l-2 border-[#c5a880] pl-4">
-                We believe a property is more than a structure or a piece of land. It is where plans become routines, families grow and futures take shape.
+                We believe the best things in life come in small packages. Garden Green is all about living in open spaces with an open mind, where quality meets nature.
               </p>
             </div>
 
@@ -128,18 +128,18 @@ export const AboutCompany: React.FC<AboutCompanyProps> = ({ onContactClick }) =>
               className="relative bg-[#121418] border border-[#c5a880]/30 p-8 sm:p-10 max-w-2xl w-full z-10 my-auto shadow-2xl"
             >
               <span className="text-xs uppercase tracking-[0.25em] text-[#c5a880] font-semibold block mb-2">
-                COMPANY PHILOSOPHY
+                DEVELOPER PROFILE
               </span>
               <h3 className="font-serif text-3xl text-[#f4f1ea] mb-6">
-                Dreamland Properties • Palakkad
+                PATHAMNUMBER DREAMLAND PROPERTIES
               </h3>
 
               <div className="space-y-4 text-sm text-[#9e9a90] font-light leading-relaxed mb-8">
                 <p>
-                  Located at Dev Arcade, Near Polytechnic College, Marutharode, Koottupaatha, Palakkad, Dreamland Properties holds a profound respect for structural quality and natural harmony. Every villa project, land layout, renovation, and interior design is executed with absolute precision.
+                  Based at Dev Arcade, Near Polytechnic College, Marutharode, Kootupatha, Palakkad, PATHAMNUMBER DREAMLAND PROPERTIES PVT LTD is dedicated to building secure, natural, and high-quality gated residential enclaves.
                 </p>
                 <p>
-                  We build enduring relationships with clients through complete transparency, zero hidden charges, and continuous project oversight.
+                  With the launch of Garden Green at Aalampallam, we deliver premium plot and villa designs featuring proper drainage, solar street lights, gated security, and common parks.
                 </p>
               </div>
 

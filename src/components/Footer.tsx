@@ -62,15 +62,19 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Compact phone & location line */}
-          <div className="text-[11px] text-[#9e9a90] font-light space-y-1">
-            <p className="flex items-center gap-1.5 text-[#e6e1d7]">
-              <Phone className="w-3 h-3 text-[#c5a880]" />
-              <a href="tel:+916282844739" className="font-mono hover:text-[#c5a880]">+91 62828 44739</a>
-              <span className="text-white/20">|</span>
-              <a href="tel:+916282844608" className="font-mono hover:text-[#c5a880]">+91 62828 44608</a>
+          <div className="text-[11px] text-[#9e9a90] font-light space-y-1.5">
+            <p className="flex flex-col gap-1 text-[#e6e1d7]">
+              <span className="flex items-center gap-1.5">
+                <Phone className="w-3 h-3 text-[#c5a880]" />
+                <a href="tel:+916282844739" className="font-mono hover:text-[#c5a880]">+91 6282 844 739</a>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Phone className="w-3 h-3 text-[#c5a880]" />
+                <a href="tel:+916282844608" className="font-mono hover:text-[#c5a880]">+91 6282 844 608</a>
+              </span>
             </p>
             <p className="text-[10px] text-[#9e9a90] line-clamp-1">
-              Dev Arcade, Near Polytechnic College, Marutharode, Palakkad
+              Dev Arcade, Near Polytechnic College, Marutharode, Kootupatha, Palakkad
             </p>
           </div>
 
@@ -85,8 +89,8 @@ export const Footer: React.FC = () => {
           </a>
 
           {/* Bottom Copyright & Back to Top */}
-          <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[10px] text-[#9e9a90]">
-            <p>© {new Date().getFullYear()} Dreamland Properties.</p>
+          <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[9px] text-[#9e9a90]">
+            <p>© {new Date().getFullYear()} Pathamnumber Dreamland Properties Pvt Ltd. | DWC MEDIA 761 000 000</p>
 
             <button
               onClick={scrollToTop}
@@ -117,15 +121,15 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="font-serif text-lg italic text-[#c5a880] mb-4">
-              "Curating better spaces for you."
+              "YOUR LAND, YOUR VILLA! Inspired by nature."
             </p>
 
             <p className="text-xs text-[#9e9a90] font-light leading-relaxed max-w-md mb-4">
-              Premier real estate developer in Palakkad providing Villa Construction, Land Development, Property Consultation, Renovation Works &amp; Interior Designing.
+              PATHAMNUMBER DREAMLAND PROPERTIES PVT LTD presents Garden Green Gated Villa Enclave at Aalampallam Palakkad — comprising of just 22 luxury villas.
             </p>
 
             <p className="text-xs text-[#d8d2c5] font-light leading-relaxed">
-              Dev Arcade, Near Polytechnic College, Marutharode, Koottupaatha, Palakkad
+              Dev Arcade, Near Polytechnic College, Marutharode, Kootupatha, Palakkad
             </p>
           </div>
 
@@ -199,11 +203,15 @@ export const Footer: React.FC = () => {
               </a>
             </div>
 
-            <div className="space-y-1 text-xs text-[#9e9a90] font-light">
-              <p className="flex items-center gap-2">
+            <div className="space-y-1 text-xs text-[#9e9a90] font-light flex flex-col items-start">
+              <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#c5a880]" />
-                <a href="tel:+916282844739" className="hover:text-[#c5a880] font-mono">+91 62828 44739</a> / <a href="tel:+916282844608" className="hover:text-[#c5a880] font-mono">+91 62828 44608</a>
-              </p>
+                <a href="tel:+916282844739" className="hover:text-[#c5a880] font-mono">+91 6282 844 739</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-3.5 h-3.5"></span>
+                <a href="tel:+916282844608" className="hover:text-[#c5a880] font-mono">+91 6282 844 608</a>
+              </div>
               <p className="pt-1">
                 Email: <a href="mailto:dreamlandspropertiespkd@gmail.com" className="text-[#c5a880] hover:underline font-mono">dreamlandspropertiespkd@gmail.com</a>
               </p>
@@ -213,8 +221,8 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-row items-center justify-between text-[11px] text-[#9e9a90] font-light">
-          <p>© {new Date().getFullYear()} Dreamland Properties. All rights reserved.</p>
+        <div className="pt-8 flex flex-row items-center justify-between text-[10px] text-[#9e9a90] font-light">
+          <p>© {new Date().getFullYear()} Pathamnumber Dreamland Properties Pvt Ltd. | DWC MEDIA 761 000 000 | All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <button
