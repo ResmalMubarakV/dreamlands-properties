@@ -17,32 +17,56 @@ export const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
 
-  // Scroll listener for sticky glass header & active scroll-spy section
+  // High-performance RAF scroll listener for sticky header & scroll-spy
   useEffect(() => {
+    let rafId: number | null = null;
+    let lastScrolled = false;
+    let lastSection = "home";
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (rafId !== null) return;
 
-      // Scroll spy on homepage
-      if (location.pathname === "/") {
-        const sections = ["home", "projects", "gallery", "about", "contact"];
-        const scrollPosition = window.scrollY + 180;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        const currentY = window.scrollY;
+        const shouldBeScrolled = currentY > 20;
 
-        for (const sec of sections) {
-          const el = document.getElementById(sec);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPosition >= top && scrollPosition < top + height) {
-              setActiveSection(sec);
-              break;
+        if (shouldBeScrolled !== lastScrolled) {
+          lastScrolled = shouldBeScrolled;
+          setIsScrolled(shouldBeScrolled);
+        }
+
+        // Scroll spy on homepage
+        if (location.pathname === "/") {
+          const sections = ["home", "projects", "gallery", "about", "contact"];
+          const scrollPosition = currentY + 180;
+          let matched = lastSection;
+
+          for (const sec of sections) {
+            const el = document.getElementById(sec);
+            if (el) {
+              const top = el.offsetTop;
+              const height = el.offsetHeight;
+              if (scrollPosition >= top && scrollPosition < top + height) {
+                matched = sec;
+                break;
+              }
             }
           }
+
+          if (matched !== lastSection) {
+            lastSection = matched;
+            setActiveSection(matched);
+          }
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, [location.pathname]);
 
   const handleNavClick = (sectionId: string) => {
